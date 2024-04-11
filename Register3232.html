@@ -1,0 +1,131 @@
+<html>
+<head>
+    <title>Register3232</title>
+    <style>
+        body {
+            margin: 0%;
+            background: url(book2bg.avif) no-repeat center / 100% 85vh;
+            background-size: 100%;
+        }
+        
+        .navigation {
+            background: #a0d6d6;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .navigation a {
+            font-size: 2.6rem;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .register {
+            margin: 5% 5% 0;
+            width: 40%;
+            padding: 20px;
+        }
+        
+        .register * {
+            margin-bottom: 1%;
+        }
+        
+        .register div input {
+            padding: 3%;
+            width: 30vw;
+        }
+        
+        .btn {
+            width: 33vw;
+            padding: 3%;
+        }
+        .password-strength {
+            margin-top: 10px;
+            color: #333;
+            }
+    </style>
+
+</head>
+<body>
+    <nav class="navigation">
+        <a href="home3232.html">Home</a>
+        <a href="login3232.html">Login Page</a>
+        <a href="register3232.html">Register</a>
+    </nav>
+    <section class="register">
+        Register :
+        <div>
+            <input id="username" placeholder="Enter your name"/>
+        </div>
+        <div>
+            <input id="email" type="text" placeholder="Enter EmailID"/>
+        </div>
+        <div>
+            <input id="password" type="password" placeholder="Enter Password" oninput="checkPasswordStrength()">
+        </div>
+        <div id="password-strength"></div>
+        <div>
+            <input id="copassw" type="password" placeholder="Enter Confirm Password"/>
+        </div>
+        <p>Gender
+            <input id="male" name="gender" type="radio"/>Male
+            <input id="female" name="gender" type="radio"/>Female
+        </p>
+        <button class="btn" onclick="validateformreg()">Register</button>
+        <p id="output"></p>
+    </section>
+    <script>
+        function checkPasswordStrength() {
+            var password = document.getElementById('password').value;
+            var strengthIndicator = document.getElementById('password-strength');
+            strengthIndicator.innerHTML = "";
+            var passwordStrength = 0;
+
+            if (password.length >= 5) {
+                passwordStrength += 1;
+            }
+
+            switch (passwordStrength) {
+                case 0:
+                    strengthIndicator.innerHTML = "Weak";
+                    strengthIndicator.style.color = "red";
+                    break;
+                case 1:
+                strengthIndicator.innerHTML = "Strong";
+                strengthIndicator.style.color = "green";break;
+                
+                    
+            }
+        }
+        function validateformreg() {
+            var email = document.getElementById("email").value;
+    
+            let regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+            let isEmailValid = regex.test(email);
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var copassw = document.getElementById('copassw').value;
+            var usernameRegex = /^[a-zA-Z0-9]+$/;
+            var isUsernameValid = usernameRegex.test(username);
+    
+            var passwordStrength = checkPasswordStrength();
+            if (passwordStrength < 1) {
+                alert('Too weak. Please choose a stronger password.');
+                return;
+            }
+    
+            var output = document.getElementById('output'); // Add this line to retrieve the 'output' element
+            if(password !== copassw)
+            {
+                alert('Confirm password is not correct.');
+            }
+            if (isUsernameValid && isEmailValid && (password === copassw)) {
+                alert('Registration successful!');
+            } else {
+                alert('Fields are either empty or incorrectly filled. Please check your input.');
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>Login3232</title>
+    <style>
+        body {
+            margin: 0%;
+            background: url(book2bg.avif) no-repeat center / cover;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            font-size: 2.6rem;
+            color: white;
+        }
+        
+        .navigation {
+            background: #a0d6d6;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .login {
+            background-color: white;
+            width: 30%;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10% auto 0;
+            padding: 5%;
+        }
+        
+        .login div {
+            margin: 2%;
+        }
+        
+        .login input {
+            padding: 2%;
+            width: 25vw;
+        }
+        
+        .forget {
+            font-size: 1.2rem;
+        }
+        
+        .btn {
+            background-color: #a0d6d6;
+            padding: 3%;
+            width: 10vw;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id = "output"> </div>
+    <nav class="navigation">
+        <a href="Home3232.html">Home</a>
+        <a href="login3232.html">Login Page</a>
+        <a href="register3232.html">Register</a>
+    </nav>
+
+    <section class="login">
+        <div>
+            Sign In:
+            <input id="email" placeholder="Enter EmailID"/>
+        </div>
+        <div>
+            <input type="password" id="passw" placeholder="Enter Password"/>
+        </div>
+        <div>
+            <a class="forget" href="forgot password.html">Forgot Password?</a>
+        </div>
+        <div>
+            <a href="registerexp5.html"> Don't have an account? Register</a>
+        </div>
+        <button class="btn" onclick="validateform()"> LOGIN</button>
+    </section>
+    <script>
+        var output = document.getElementById('output');
+function validateform() {
+    var email = document.getElementById("email").value;
+    var passw = document.getElementById("passw").value;
+    let regex = /^[a-z0-9+]+@[a-z]+\.[a-z]{2,3}$/;
+         let isValid = regex.test(email);
+         
+    if (email === '' || passw === '' ) {
+        alert('Please fill in all the fields');
+    }else if (isValid) {
+        alert('Please wait. Redirecting to your profile.');
+     } else {
+        alert(' Invalid email address');
+     }
+        
+    }
+    </script>
+</body>
+</html>

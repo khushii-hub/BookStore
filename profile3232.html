@@ -1,0 +1,256 @@
+<html>
+<head>
+    <title>My Account</title> 
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('book2bg.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background: aquamarine;
+            color: #ffffff;
+            padding: 20px;
+            text-align: left;
+        }
+
+        header ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        main {
+            padding: 20px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 80px; /* Adjust width as needed */
+        }
+        .book {
+            display: inline-block;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            margin: 10px;
+        }
+        
+        .book img {
+            max-width: 80%;
+            height: auto;
+        }
+        .company-name {
+            font-size: 2em;
+            position: absolute;
+            top: 20px;
+            right: 300px;
+            width: 40px;
+        }
+        .wishlist-icon {
+            position: fixed;
+            top: 20px;
+            right: 420px;
+        }
+        .wishlist-icon img {
+            width: 50px; /* Adjust width as needed */
+            height: auto;
+            display: block;
+        }
+        .wishlist-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: white;
+            color: black; /* Cart color */
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .orders {
+            padding: 20px;
+            margin: 20px 0;
+            background-image: url('order.png'); /* Replace with the URL or path to your 'Orders' background image */
+            background-size: cover;
+            
+            background-repeat: no-repeat;
+            
+        }
+        .address {
+            padding: 20px;
+            margin: 20px 0;
+            background-image: url('loca.png'); /* Replace with the URL or path to your 'Addresses' background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+         }
+         .secu {
+            padding: 20px;
+            margin: 20px 0;
+            background-image: url('locked.jpg'); /* Replace with the URL or path to your 'Addresses' background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+         } .pay {
+            padding: 20px;
+            margin: 20px 0;
+            background-image: url('pay1.png'); /* Replace with the URL or path to your 'Addresses' background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+         }
+         .user {
+            padding: 20px;
+            margin: 20px 0;
+            background-image: url('user.jpg'); /* Replace with the URL or path to your 'Addresses' background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+         }
+        .lang {
+            font-size: 1em;
+            color:black;
+            position: absolute;
+            top: 33px;
+            right: 495px;
+            width: 100px;
+        }
+        .register{
+            margin-top: -4%;
+            margin-left: 35%;
+            width: 20%;
+            
+            padding: 20px;
+
+        }
+        .register *{
+            margin-bottom: 1%;
+        }
+        .register div input{
+            padding:3%;
+            width:30vw
+        }
+        
+        .container { 
+            max-width: 1200px; margin: 0 auto; padding: 0 15px; 
+        }
+        .account-section {
+            
+            display: inline-block;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            width: 180px;
+            margin: 10px;
+            color: rgb(0, 0, 0);
+             }
+         </style> </head>
+             <body>
+                <header>
+                    <div class="lang" align="right">
+                        LANG> ENG         
+                    </div>
+                    <img class="logo" src="logo.avif" alt="Logo">
+                    <div class="company-name" align="right">
+                        GatoLibrary.com
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="login3232.html">Registration & Login</a></li>
+                            <li><a href="#profile">User Profile</a></li>
+                            <li><a href="bookcat1.html">Books Catalog</a></li>
+                            <a href="#cart">Shopping Cart</a></li>
+                            
+                        </ul>
+                    </nav>
+                    <section class="register">
+                        <div>
+                            <input id="sear" type="text" placeholder="Search for Books..."/>
+                        </div>
+                    </section>
+                 </header>
+                 <div class="container">
+                    <h2><b>Your Account</b></h2> 
+                    <div class="account-section"> 
+                        <div class="user">
+                        <h2><b>User Details</b></h2> 
+                        
+                    </div> </div>
+                     <div class="account-section"> 
+                        <div class="orders">
+                         <h2>Your Orders</h2>
+                         
+                    </div>  
+                </div>  
+                         <div class="account-section"> 
+                            <div class="address">
+                            
+                            <h2><b>Your Addresses</b></h2> 
+                            
+                        </div> 
+                    </div>
+                          
+                             
+                              <div class="account-section"> 
+                                <div class="secu">
+                                <h2><b>Login & security</b></h2> 
+                                
+                                
+                        </div> </div>
+                        <div class="account-section"> 
+                            <div class="pay">
+                            <h2><b>Payment options</b></h2> 
+                            
+                        </div> </div>
+                        
+                     </body>
+                     <div class="wishlist-icon">
+                        <img src="wl.png" alt="wishlist">
+                        <div class="wishlist-count">5</div>
+                    </div>
+                    <div class="container">
+                        <h2>Recently Viewed Books</h2> 
+                         
+                            
+                            <div class="book">
+                                <a href="book-details-atomic-habits.html">
+                                    <img src="atomichabits.jpg" alt="Atomic Habits">
+                                    <h3>Atomic Habits</h3>
+                                    <p>James Clear</p>
+                                    <p> Know more..</p>
+                                </a>
+                            </div>
+                            <div class="book">
+                                <a href="book-details-alchemist.html">
+                                    <img src="atti.jpg" alt="Attitude is Everything">
+                                    <h3>Attitude is Everything</h3>
+                                    <p>Jeff Keller</p>
+                                    <p> Know more..</p>
+                                </a>
+                            </div> 
+                            
+                        </div> 
+                      </html>
+             

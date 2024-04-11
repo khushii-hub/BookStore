@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>pay</title>
+    <link rel="stylesheet" type="text/css" href="payment3232.css">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="Home3232.html">Payment by Credit Card</a>
+        
+    </nav>
+<p align="center">Don't exit the page until payment is confirmed</p>
+<section class="pay">
+    <div>
+        <b>Payment Details:</b> 
+        <input id="nameInput" placeholder="Enter Name"/>
+    </div>
+    <div>
+        <input id="cardNumberInput" placeholder="Enter Card Number"/>
+    </div>
+    <div>
+        <input id="expirationInput" placeholder="Enter Expiration Date"/>
+    </div>
+    <div>
+        <input id="securityCodeInput" placeholder="Enter Security Code"/>
+    </div>
+    <button class="btn" onclick="validateForm()">CONFIRM</button>
+</section>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById("nameInput").value;
+        var cardNumber = document.getElementById("cardNumberInput").value;
+        var expirationDate = document.getElementById("expirationInput").value;
+        var securityCode = document.getElementById("securityCodeInput").value;
+
+        if (name === '' || cardNumber === '' || expirationDate === '' || securityCode === '') {
+            alert('Please fill in all the fields');
+        } else {
+            // Simulating asynchronous operation (e.g., AJAX request)
+            setTimeout(function () {
+                // You can add further logic here, such as server-side validation or API calls
+
+                // Displaying a loading message
+                alert('Processing payment...');
+
+                // Simulating a successful payment confirmation
+                alert('Payment confirmed!');
+
+                // Resetting form fields
+                document.getElementById("nameInput").value = '';
+                document.getElementById("cardNumberInput").value = '';
+                document.getElementById("expirationInput").value = '';
+                document.getElementById("securityCodeInput").value = '';
+
+                // Redirecting or updating UI as needed
+                // Example: window.location.href = 'success.html';
+            }, 2000); // Simulating a delay for asynchronous operations
+        }
+    }
+</script>
+
+</body>
+</html>
